@@ -1,0 +1,735 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8467917923E8EE8F007D8BAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467917823E8EE8F007D8BAA /* AppDelegate.swift */; };
+		8467917B23E8EE8F007D8BAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467917A23E8EE8F007D8BAA /* SceneDelegate.swift */; };
+		8467917D23E8EE8F007D8BAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467917C23E8EE8F007D8BAA /* ViewController.swift */; };
+		8467918023E8EE8F007D8BAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8467917E23E8EE8F007D8BAA /* Main.storyboard */; };
+		8467918223E8EE96007D8BAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8467918123E8EE96007D8BAA /* Assets.xcassets */; };
+		8467918523E8EE96007D8BAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8467918323E8EE96007D8BAA /* LaunchScreen.storyboard */; };
+		8467919023E8EE97007D8BAA /* keyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467918F23E8EE97007D8BAA /* keyboardTests.swift */; };
+		8467919B23E8EE97007D8BAA /* keyboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467919A23E8EE97007D8BAA /* keyboardUITests.swift */; };
+		846791AF23E8EF10007D8BAA /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846791AE23E8EF10007D8BAA /* KeyboardViewController.swift */; };
+		846791B323E8EF10007D8BAA /* SakhaKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 846791AC23E8EF10007D8BAA /* SakhaKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8467918C23E8EE97007D8BAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8467916D23E8EE8F007D8BAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8467917423E8EE8F007D8BAA;
+			remoteInfo = keyboard;
+		};
+		8467919723E8EE97007D8BAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8467916D23E8EE8F007D8BAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8467917423E8EE8F007D8BAA;
+			remoteInfo = keyboard;
+		};
+		846791B123E8EF10007D8BAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8467916D23E8EE8F007D8BAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 846791AB23E8EF10007D8BAA;
+			remoteInfo = SakhaKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		846791B723E8EF10007D8BAA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				846791B323E8EF10007D8BAA /* SakhaKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8467917523E8EE8F007D8BAA /* keyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = keyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8467917823E8EE8F007D8BAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8467917A23E8EE8F007D8BAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8467917C23E8EE8F007D8BAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8467917F23E8EE8F007D8BAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8467918123E8EE96007D8BAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8467918423E8EE96007D8BAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8467918623E8EE96007D8BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8467918B23E8EE97007D8BAA /* keyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = keyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8467918F23E8EE97007D8BAA /* keyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardTests.swift; sourceTree = "<group>"; };
+		8467919123E8EE97007D8BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8467919623E8EE97007D8BAA /* keyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = keyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8467919A23E8EE97007D8BAA /* keyboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardUITests.swift; sourceTree = "<group>"; };
+		8467919C23E8EE97007D8BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846791AC23E8EF10007D8BAA /* SakhaKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SakhaKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		846791AE23E8EF10007D8BAA /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		846791B023E8EF10007D8BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8467917223E8EE8F007D8BAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8467918823E8EE97007D8BAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8467919323E8EE97007D8BAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846791A923E8EF10007D8BAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8467916C23E8EE8F007D8BAA = {
+			isa = PBXGroup;
+			children = (
+				8467917723E8EE8F007D8BAA /* keyboard */,
+				8467918E23E8EE97007D8BAA /* keyboardTests */,
+				8467919923E8EE97007D8BAA /* keyboardUITests */,
+				846791AD23E8EF10007D8BAA /* SakhaKeyboard */,
+				8467917623E8EE8F007D8BAA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8467917623E8EE8F007D8BAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8467917523E8EE8F007D8BAA /* keyboard.app */,
+				8467918B23E8EE97007D8BAA /* keyboardTests.xctest */,
+				8467919623E8EE97007D8BAA /* keyboardUITests.xctest */,
+				846791AC23E8EF10007D8BAA /* SakhaKeyboard.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8467917723E8EE8F007D8BAA /* keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8467917823E8EE8F007D8BAA /* AppDelegate.swift */,
+				8467917A23E8EE8F007D8BAA /* SceneDelegate.swift */,
+				8467917C23E8EE8F007D8BAA /* ViewController.swift */,
+				8467917E23E8EE8F007D8BAA /* Main.storyboard */,
+				8467918123E8EE96007D8BAA /* Assets.xcassets */,
+				8467918323E8EE96007D8BAA /* LaunchScreen.storyboard */,
+				8467918623E8EE96007D8BAA /* Info.plist */,
+			);
+			path = keyboard;
+			sourceTree = "<group>";
+		};
+		8467918E23E8EE97007D8BAA /* keyboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				8467918F23E8EE97007D8BAA /* keyboardTests.swift */,
+				8467919123E8EE97007D8BAA /* Info.plist */,
+			);
+			path = keyboardTests;
+			sourceTree = "<group>";
+		};
+		8467919923E8EE97007D8BAA /* keyboardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8467919A23E8EE97007D8BAA /* keyboardUITests.swift */,
+				8467919C23E8EE97007D8BAA /* Info.plist */,
+			);
+			path = keyboardUITests;
+			sourceTree = "<group>";
+		};
+		846791AD23E8EF10007D8BAA /* SakhaKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				846791AE23E8EF10007D8BAA /* KeyboardViewController.swift */,
+				846791B023E8EF10007D8BAA /* Info.plist */,
+			);
+			path = SakhaKeyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8467917423E8EE8F007D8BAA /* keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8467919F23E8EE97007D8BAA /* Build configuration list for PBXNativeTarget "keyboard" */;
+			buildPhases = (
+				8467917123E8EE8F007D8BAA /* Sources */,
+				8467917223E8EE8F007D8BAA /* Frameworks */,
+				8467917323E8EE8F007D8BAA /* Resources */,
+				846791B723E8EF10007D8BAA /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				846791B223E8EF10007D8BAA /* PBXTargetDependency */,
+			);
+			name = keyboard;
+			productName = keyboard;
+			productReference = 8467917523E8EE8F007D8BAA /* keyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8467918A23E8EE97007D8BAA /* keyboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 846791A223E8EE97007D8BAA /* Build configuration list for PBXNativeTarget "keyboardTests" */;
+			buildPhases = (
+				8467918723E8EE97007D8BAA /* Sources */,
+				8467918823E8EE97007D8BAA /* Frameworks */,
+				8467918923E8EE97007D8BAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8467918D23E8EE97007D8BAA /* PBXTargetDependency */,
+			);
+			name = keyboardTests;
+			productName = keyboardTests;
+			productReference = 8467918B23E8EE97007D8BAA /* keyboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8467919523E8EE97007D8BAA /* keyboardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 846791A523E8EE97007D8BAA /* Build configuration list for PBXNativeTarget "keyboardUITests" */;
+			buildPhases = (
+				8467919223E8EE97007D8BAA /* Sources */,
+				8467919323E8EE97007D8BAA /* Frameworks */,
+				8467919423E8EE97007D8BAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8467919823E8EE97007D8BAA /* PBXTargetDependency */,
+			);
+			name = keyboardUITests;
+			productName = keyboardUITests;
+			productReference = 8467919623E8EE97007D8BAA /* keyboardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		846791AB23E8EF10007D8BAA /* SakhaKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 846791B423E8EF10007D8BAA /* Build configuration list for PBXNativeTarget "SakhaKeyboard" */;
+			buildPhases = (
+				846791A823E8EF10007D8BAA /* Sources */,
+				846791A923E8EF10007D8BAA /* Frameworks */,
+				846791AA23E8EF10007D8BAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SakhaKeyboard;
+			productName = SakhaKeyboard;
+			productReference = 846791AC23E8EF10007D8BAA /* SakhaKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8467916D23E8EE8F007D8BAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Admin;
+				TargetAttributes = {
+					8467917423E8EE8F007D8BAA = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					8467918A23E8EE97007D8BAA = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 8467917423E8EE8F007D8BAA;
+					};
+					8467919523E8EE97007D8BAA = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 8467917423E8EE8F007D8BAA;
+					};
+					846791AB23E8EF10007D8BAA = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 8467917023E8EE8F007D8BAA /* Build configuration list for PBXProject "keyboard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8467916C23E8EE8F007D8BAA;
+			productRefGroup = 8467917623E8EE8F007D8BAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8467917423E8EE8F007D8BAA /* keyboard */,
+				8467918A23E8EE97007D8BAA /* keyboardTests */,
+				8467919523E8EE97007D8BAA /* keyboardUITests */,
+				846791AB23E8EF10007D8BAA /* SakhaKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8467917323E8EE8F007D8BAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8467918523E8EE96007D8BAA /* LaunchScreen.storyboard in Resources */,
+				8467918223E8EE96007D8BAA /* Assets.xcassets in Resources */,
+				8467918023E8EE8F007D8BAA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8467918923E8EE97007D8BAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8467919423E8EE97007D8BAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846791AA23E8EF10007D8BAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8467917123E8EE8F007D8BAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8467917D23E8EE8F007D8BAA /* ViewController.swift in Sources */,
+				8467917923E8EE8F007D8BAA /* AppDelegate.swift in Sources */,
+				8467917B23E8EE8F007D8BAA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8467918723E8EE97007D8BAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8467919023E8EE97007D8BAA /* keyboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8467919223E8EE97007D8BAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8467919B23E8EE97007D8BAA /* keyboardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846791A823E8EF10007D8BAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846791AF23E8EF10007D8BAA /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8467918D23E8EE97007D8BAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8467917423E8EE8F007D8BAA /* keyboard */;
+			targetProxy = 8467918C23E8EE97007D8BAA /* PBXContainerItemProxy */;
+		};
+		8467919823E8EE97007D8BAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8467917423E8EE8F007D8BAA /* keyboard */;
+			targetProxy = 8467919723E8EE97007D8BAA /* PBXContainerItemProxy */;
+		};
+		846791B223E8EF10007D8BAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 846791AB23E8EF10007D8BAA /* SakhaKeyboard */;
+			targetProxy = 846791B123E8EF10007D8BAA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8467917E23E8EE8F007D8BAA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8467917F23E8EE8F007D8BAA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8467918323E8EE96007D8BAA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8467918423E8EE96007D8BAA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8467919D23E8EE97007D8BAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8467919E23E8EE97007D8BAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		846791A023E8EE97007D8BAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TKS9JWTLEV;
+				INFOPLIST_FILE = keyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		846791A123E8EE97007D8BAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TKS9JWTLEV;
+				INFOPLIST_FILE = keyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.keyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		846791A323E8EE97007D8BAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TKS9JWTLEV;
+				INFOPLIST_FILE = keyboardTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.keyboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/keyboard.app/keyboard";
+			};
+			name = Debug;
+		};
+		846791A423E8EE97007D8BAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TKS9JWTLEV;
+				INFOPLIST_FILE = keyboardTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.keyboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/keyboard.app/keyboard";
+			};
+			name = Release;
+		};
+		846791A623E8EE97007D8BAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TKS9JWTLEV;
+				INFOPLIST_FILE = keyboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.keyboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = keyboard;
+			};
+			name = Debug;
+		};
+		846791A723E8EE97007D8BAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TKS9JWTLEV;
+				INFOPLIST_FILE = keyboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.keyboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = keyboard;
+			};
+			name = Release;
+		};
+		846791B523E8EF10007D8BAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DLJS4H3K84;
+				INFOPLIST_FILE = SakhaKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.keyboard.SakhaKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		846791B623E8EF10007D8BAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DLJS4H3K84;
+				INFOPLIST_FILE = SakhaKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.keyboard.SakhaKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8467917023E8EE8F007D8BAA /* Build configuration list for PBXProject "keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8467919D23E8EE97007D8BAA /* Debug */,
+				8467919E23E8EE97007D8BAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8467919F23E8EE97007D8BAA /* Build configuration list for PBXNativeTarget "keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846791A023E8EE97007D8BAA /* Debug */,
+				846791A123E8EE97007D8BAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		846791A223E8EE97007D8BAA /* Build configuration list for PBXNativeTarget "keyboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846791A323E8EE97007D8BAA /* Debug */,
+				846791A423E8EE97007D8BAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		846791A523E8EE97007D8BAA /* Build configuration list for PBXNativeTarget "keyboardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846791A623E8EE97007D8BAA /* Debug */,
+				846791A723E8EE97007D8BAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		846791B423E8EF10007D8BAA /* Build configuration list for PBXNativeTarget "SakhaKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846791B523E8EF10007D8BAA /* Debug */,
+				846791B623E8EF10007D8BAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8467916D23E8EE8F007D8BAA /* Project object */;
+}
