@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let buttonTitles = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],["Нь", "Дь", "Ҥ", "Ҕ", "Ө", "Һ", "Ү"]] as [Any]
-        print("asd", buttonTitles.count)
+        print("asd", button.title(for: .normal), button.titleLabel)
         for btn in buttonTitles{
             print("sdaa", btn as? [String])
         }

@@ -47,7 +47,7 @@ class KeyboardViewController: UIInputViewController {
         row4.translatesAutoresizingMaskIntoConstraints = false
         row5.translatesAutoresizingMaskIntoConstraints = false
         addKeyboardViewConstraints(inputView: self.view, rowViews: [row0, row1, row2, row3, row4, row5])*/
-        let buttonTitles = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],["Нь", "Дь", "Ҥ", "Ҕ", "Ө", "Һ", "Ү"], ["Й", "Ц", "У", "К", "Е", "Н", "Г", "Ш", "Щ", "З", "Х", "Ъ"], ["Ф", "Ы", "В", "А", "П", "Р", "О", "Л", "Д", "Ж", "Э"], ["SH", "Я", "Ч", "С", "М", "И", "Т", "Ь", "Б", "Ю", "BK"], ["KB", "SPACE", ".", "RETURN"]] as [Any]
+        let buttonTitles = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],["Нь", "Дь", "Ҥ", "Ҕ", "Ө", "Һ", "Ү"], ["Й", "Ц", "У", "К", "Е", "Н", "Г", "Ш", "Щ", "З", "Х", "Ъ"], ["Ф", "Ы", "В", "А", "П", "Р", "О", "Л", "Д", "Ж", "Э"], ["SH", "Я", "Ч", "С", "М", "И", "Т", "Ь", "Б", "Ю", "BK"], ["KB", "Пробел", ".", "Ввод"]] as [Any]
         parseKeyboard(buttonTitles: buttonTitles)
     }
     //var rows: UIView!
@@ -88,7 +88,10 @@ class KeyboardViewController: UIInputViewController {
         button.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
         button.setTitleColor(.black, for: .normal)
         //button.backgroundColor = UIColor.blue
-        button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapButton(sender: event: )), for: .touchUpInside)
+        if title == "SH"{
+            button.addTarget(self, action: #selector(didTapDoubleButton(sender: event: )), for: .touchDownRepeat)
+        }
         
         //button.backgroundColor = UIColor(red: 171/255, green: 178/255, blue: 186/255, alpha: 1.0)
         // Shadow and Radius
@@ -99,10 +102,25 @@ class KeyboardViewController: UIInputViewController {
         button.layer.masksToBounds = false
         button.layer.cornerRadius = 5.0
         //button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.bold)
-        if title == "SH" || title == "KB" || title == "BK" || title == "RETURN"{
+        let screen = UIScreen.main.bounds
+        if title == "SH" || title == "KB" || title == "BK" || title == "Ввод"{
             button.backgroundColor = UIColor(red: 171/255, green: 178/255, blue: 186/255, alpha: 1.0)
         }
-        
+        /*if title == "KB"{
+            button.frame = CGRect(x: 5, y: 0, width: 30, height: 25)
+            //button.sizeToFit()
+            button.translatesAutoresizingMaskIntoConstraints = true
+        }
+        if title == "  Ввод  "{
+            button.frame = CGRect(x: screen.width - 65, y: 5, width: 60, height: 25)
+            //button.sizeToFit()
+            button.translatesAutoresizingMaskIntoConstraints = true
+        }
+        if title == "."{
+            button.frame = CGRect(x: screen.width - 100, y: 5, width: 30, height: 25)
+            //button.sizeToFit()
+            button.translatesAutoresizingMaskIntoConstraints = true
+        }*/
         return button
     }
     
@@ -164,17 +182,30 @@ class KeyboardViewController: UIInputViewController {
             inputView.addConstraint(bottomConstraint)
         }
     }
-    
-    @objc func didTapButton(sender: AnyObject){
+    var count = 0
+    @objc func didTapDoubleButton(sender: AnyObject, event: UIEvent){
+        let touch: UITouch = event.allTouches!.first!
+        if (touch.tapCount == 2) {
+            count = 2
+            self.boldWordsTap()
+        }
+    }
+    @objc func didTapButton(sender: AnyObject, event: UIEvent){
         let button = sender as! UIButton
-        self.smallWordsTap()
+        let touch: UITouch = event.allTouches!.first!
+        if button.title(for: .normal) != "SH"{
+            self.smallWordsTap()
+        }
+        if (touch.tapCount == 1) && button.title(for: .normal) == "SH"{
+            count = 0
+        }
         let proxy = textDocumentProxy
         if let title = button.title(for: .normal){
             switch title {
             case "KB": self.advanceToNextInputMode()
-            case "SPACE": buttonColor(button: button, proxy: proxy)
+            case "Пробел": buttonColor(button: button, proxy: proxy)
             case "BK": proxy.deleteBackward()
-            case "RETURN": proxy.insertText("\n")
+            case "Ввод": proxy.insertText("\n")
             case "SH": self.smallWords()
             default: proxy.insertText(title)
             }
@@ -184,18 +215,25 @@ class KeyboardViewController: UIInputViewController {
     var isSmall: Bool = false
     var isSmall2: Bool = false
     func smallWordsTap(){
-        let buttonTitles = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],["нь", "дь", "ҥ", "ҕ", "ө", "һ", "ү"], ["й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х", "ъ"], ["ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э"], ["SH", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "BK"], ["KB", "SPACE", ".", "RETURN"]] as [Any]
-        isSmall2 = true
+        if count == 0{
+            let buttonTitles = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],["нь", "дь", "ҥ", "ҕ", "ө", "һ", "ү"], ["й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х", "ъ"], ["ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э"], ["SH", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "BK"], ["KB", "Пробел", ".", "Ввод"]] as [Any]
+            isSmall = true
+            parseKeyboard(buttonTitles: buttonTitles)
+        }
+    }
+    func boldWordsTap(){
+        let buttonTitles = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],["Нь", "Дь", "Ҥ", "Ҕ", "Ө", "Һ", "Ү"], ["Й", "Ц", "У", "К", "Е", "Н", "Г", "Ш", "Щ", "З", "Х", "Ъ"], ["Ф", "Ы", "В", "А", "П", "Р", "О", "Л", "Д", "Ж", "Э"], ["SH", "Я", "Ч", "С", "М", "И", "Т", "Ь", "Б", "Ю", "BK"], ["KB", "Пробел", ".", "Ввод"]] as [Any]
+        isSmall = false
         parseKeyboard(buttonTitles: buttonTitles)
     }
     func smallWords(){
-        if isSmall == false && isSmall2 == true{
-            let buttonTitles = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],["нь", "дь", "ҥ", "ҕ", "ө", "һ", "ү"], ["й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х", "ъ"], ["ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э"], ["SH", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "BK"], ["KB", "SPACE", ".", "RETURN"]] as [Any]
+        if isSmall == false && count == 0{
+            let buttonTitles = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],["нь", "дь", "ҥ", "ҕ", "ө", "һ", "ү"], ["й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х", "ъ"], ["ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э"], ["SH", "я", "ч", "с", "м", "и", "т", "ь", "б", "ю", "BK"], ["KB", "Пробел", ".", "Ввод"]] as [Any]
             parseKeyboard(buttonTitles: buttonTitles)
             isSmall = true
         }
-        if isSmall == true{
-            let buttonTitles = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],["Нь", "Дь", "Ҥ", "Ҕ", "Ө", "Һ", "Ү"], ["Й", "Ц", "У", "К", "Е", "Н", "Г", "Ш", "Щ", "З", "Х", "Ъ"], ["Ф", "Ы", "В", "А", "П", "Р", "О", "Л", "Д", "Ж", "Э"], ["SH", "Я", "Ч", "С", "М", "И", "Т", "Ь", "Б", "Ю", "BK"], ["KB", "SPACE", ".", "RETURN"]] as [Any]
+        else{
+            let buttonTitles = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],["Нь", "Дь", "Ҥ", "Ҕ", "Ө", "Һ", "Ү"], ["Й", "Ц", "У", "К", "Е", "Н", "Г", "Ш", "Щ", "З", "Х", "Ъ"], ["Ф", "Ы", "В", "А", "П", "Р", "О", "Л", "Д", "Ж", "Э"], ["SH", "Я", "Ч", "С", "М", "И", "Т", "Ь", "Б", "Ю", "BK"], ["KB", "Пробел", ".", "Ввод"]] as [Any]
             parseKeyboard(buttonTitles: buttonTitles)
             isSmall = false
         }
